@@ -14,13 +14,13 @@ body {
 
 .content {
   flex-grow: 1;
-  max-width: 65%;
+  max-width: 100%; /* Cambiar el ancho máximo al 100% para permitir que se encoja */
 }
-
 .menu {
   background-color: #0b1442;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; 
 }
 
 .menu a {
@@ -37,7 +37,9 @@ body {
 
 .menu li {
   padding: 10px 20px;
+  max-width: 150px; /* Establecer un ancho máximo para los elementos del menú */
 }
+
 
 .menu a:hover {
   background-color: #6f6d6d;
@@ -176,6 +178,15 @@ aside .video {
   body {
     font-size: 14px;
   }
+  .menu {
+    flex-wrap: wrap; /* Permitir que los elementos del menú se envuelvan en pantallas más pequeñas */
+  }
+  
+  .menu li {
+    flex: 1 1 100%; /* Hacer que los elementos del menú ocupen todo el ancho disponible en una sola columna */
+    max-width: 100%; /* Establecer el ancho máximo al 100% para ocupar todo el espacio disponible */
+    text-align: center; /* Centrar el texto dentro de los elementos del menú */
+  }
   main {
     flex-direction: column;
     margin: 30px;
@@ -185,7 +196,8 @@ aside .video {
     margin:auto;
   }
   nav {
-    width: 50%; /* Cambiar el ancho a 100% para que ocupe todo el espacio disponible */
+    width: 100%; /* Cambiar el ancho a 100% para que ocupe todo el espacio disponible */
+    flex-wrap: wrap;
   }
   .gallery-item {
     width: calc(50% - 20px);
@@ -212,26 +224,39 @@ aside .video {
   }
   main {
     flex-direction: column; /* Cambiar la dirección a column para una disposición de columnas */
-    margin: 20px; /* Ajustar el margen en el media screen */
+    margin: 10px; /* Ajustar el margen en el media screen */
   }
    nav {
-    width: 50%; /* Cambiar el ancho a 100% para que ocupe todo el espacio disponible */
+    width: 100%; /* Cambiar el ancho a 100% para que ocupe todo el espacio disponible */
+    flex-wrap: wrap;
+  }
+  .menu {
+    flex-wrap: wrap; /* Permitir que los elementos del menú se envuelvan en pantallas más pequeñas */
+  }
+  
+  .menu li {
+    flex: 1 1 100%; /* Hacer que los elementos del menú ocupen todo el ancho disponible en una sola columna */
+    max-width: 100%; /* Establecer el ancho máximo al 100% para ocupar todo el espacio disponible */
+    text-align: center; /* Centrar el texto dentro de los elementos del menú */
   }
   aside {
-    width: 100%; /* Ajustar el ancho del aside al 100% */
-    margin: auto; /* Centrar el aside horizontalmente */
+    width: 100%; 
+    margin: auto; 
   }
   .gallery-item {
     width: calc(50% - 10px); /* Para mostrar 2 elementos por fila en el aside y la galería */
   }
+  
   .header {
     padding: 10px; /* Ajustar el padding del encabezado para que se encoja */
   }
+  
   div.gallery {
     width: 100%; /* Ajustar el ancho de la galería al 100% */
   }
+  
   div.gallery-item {
-    width: calc(50% - 10px); /* Ajustar el tamaño de los elementos de la galería para mostrar 2 imágenes por fila */
+    width: calc(33.33% - 10px); /* Ajustar el tamaño de los elementos de la galería para mostrar 3 imágenes por fila */
   }
   aside .video {
     width: 80%; /* Ajustar el ancho máximo del video */
